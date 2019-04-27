@@ -1,0 +1,205 @@
+ 717  cd /tmp/
+  718  git init remotebranchdemo
+  719  cd remotebranchdemo/
+  720  ls
+  721  git status
+  722  git branch -a
+  723  vi myfile.txt
+  724  giyt status
+  725  git status
+  726  git commit -am "1st commit"
+  727  git add .
+  728  git commit -am "1st commit"
+  729  git status
+  730  git remote add origin https://github.com/monusraj/remotebranchdemo.git
+  731  git push -u origin master
+  732  git status
+  733  vi abc
+  734  rm abc
+  735  git status
+  736  git chcekout -b mybranchdemo
+  737  git checkout -b mybranchdemo
+  738  git branch -a
+  739  vi test
+  740  git commit -am "local branch"
+  741  l
+  742  cat test
+  743  git status
+  744  git -a test
+  745  git add test
+  746  git commit -am "local branch1"
+  747  git push
+  748  git push --set-upstream origin mybranchdemo
+
+
+============================================================
+root@ip-172-31-33-113:/tmp/starter-web# cd /tmp/
+root@ip-172-31-33-113:/tmp# git init remotebranchdemo
+Initialized empty Git repository in /tmp/remotebranchdemo/.git/
+root@ip-172-31-33-113:/tmp# cd remotebranchdemo/
+root@ip-172-31-33-113:/tmp/remotebranchdemo# ls
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git branch -a
+root@ip-172-31-33-113:/tmp/remotebranchdemo# vi myfile.txt
+root@ip-172-31-33-113:/tmp/remotebranchdemo# giyt status
+
+Command 'giyt' not found, did you mean:
+
+  command 'git' from deb git
+  command 'iyt' from deb python3-yt
+  command 'gist' from deb yorick
+  command 'gift' from deb gnuift
+
+Try: apt install <deb name>
+
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        myfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git commit -am "1st commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+        myfile.txt
+
+nothing added to commit but untracked files present
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git add .
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git commit -am "1st commit"
+[master (root-commit) 06cf904] 1st commit
+ Committer: root <root@ip-172-31-33-113.us-east-2.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 myfile.txt
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git status
+On branch master
+nothing to commit, working tree clean
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git remote add origin https://githu                                                      b.com/monusraj/remotebranchdemo.git
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git push -u origin master
+Username for 'https://github.com': monusraj@gmail.com
+Password for 'https://monusraj@gmail.com@github.com':
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 237 bytes | 237.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/monusraj/remotebranchdemo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+root@ip-172-31-33-113:/tmp/remotebranchdemo# vi abc
+root@ip-172-31-33-113:/tmp/remotebranchdemo# rm abc
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git chcekout -b mybranchdemo
+git: 'chcekout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git checkout -b mybranchdemo
+Switched to a new branch 'mybranchdemo'
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git branch -a
+  master
+* mybranchdemo
+  remotes/origin/master
+root@ip-172-31-33-113:/tmp/remotebranchdemo# vi test
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git commit -am "local branch"
+On branch mybranchdemo
+Untracked files:
+        test
+
+nothing added to commit but untracked files present
+root@ip-172-31-33-113:/tmp/remotebranchdemo# l
+myfile.txt  test
+root@ip-172-31-33-113:/tmp/remotebranchdemo# cat test
+my new file in mybranchdemo
+root@ip-172-31-33-113:/tmp/remotebranchdemo# cat test
+my new file in mybranchdemo
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git status
+On branch mybranchdemo
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git -a test
+unknown option: -a
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git add test
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git commit -am "local branch1"
+[mybranchdemo a79aef7] local branch1
+ Committer: root <root@ip-172-31-33-113.us-east-2.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git push
+fatal: The current branch mybranchdemo has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin mybranchdemo
+
+root@ip-172-31-33-113:/tmp/remotebranchdemo# git push --set-upstream origin mybr                                                      anchdemo
+Username for 'https://github.com': monusraj@gmail.com
+Password for 'https://monusraj@gmail.com@github.com':
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'mybranchdemo' on GitHub by visiting:
+remote:      https://github.com/monusraj/remotebranchdemo/pull/new/mybranchdemo
+remote:
+To https://github.com/monusraj/remotebranchdemo.git
+ * [new branch]      mybranchdemo -> mybranchdemo
+Branch 'mybranchdemo' set up to track remote branch 'mybranchdemo' from 'origin'                                                      .
