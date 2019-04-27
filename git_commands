@@ -1,0 +1,36 @@
+ 676  git clone https://github.com/maheshkharwadkar/starter-web.git
+  677  ls
+  678  cd starter-web/
+  679  ls
+  680  git status
+  681  git checkout -b myfeature_monu
+  682  ls
+  683  git status
+  684  git brances
+  685  git show
+  686  ls
+  687  vi humans.txt
+  688  git status
+  689  git commit -am "my changes"
+  690  git checkout master
+  691  ls
+  692  vi README.md
+  693  git commit -am "Changes to master for rebasing example"
+  694  git log --oneline --decorate --all --graph
+  695  git checkout myfeature_monu
+  696  git rebase master
+  697  git log --oneline --decorate --all --graph
+  698  git commit -am "commit after rebasing"
+  699  git log --oneline --decorate --all --graph
+  700  git status
+  701  git chceckout master
+  702  git checkout master
+  703  git show branch
+  704  git show branches
+  705  git diff master myfeatture_monu
+  706  git diff master myfeature_monu
+  707  git merge myfeature_monu
+  708  git diff master myfeature_monu
+  709  git log --oneline --decorate --all --graph
+  710  git branch -d myfeature_monu
+  711  git branch -a
