@@ -1,0 +1,30 @@
+Add tag for versioning
+
+root@ip-172-31-33-113:/opt/sample-php-project# git branch -a
+* dev_branch
+  master
+  remotes/origin/dev_branch
+  remotes/origin/master
+root@ip-172-31-33-113:/opt/sample-php-project# git checkout master
+Switched to branch 'master'
+root@ip-172-31-33-113:/opt/sample-php-project# git branch -a
+  dev_branch
+* master
+  remotes/origin/dev_branch
+  remotes/origin/master
+root@ip-172-31-33-113:/opt/sample-php-project# git tag|tail -1
+root@ip-172-31-33-113:/opt/sample-php-project# git tag -a "1.0.20190505-0930"
+fatal: no tag message?
+root@ip-172-31-33-113:/opt/sample-php-project# git tag -a "1.0.20190505-0930" -m  "devops"
+root@ip-172-31-33-113:/opt/sample-php-project# git tag|tail -1
+1.0.20190505-0930
+root@ip-172-31-33-113:/opt/sample-php-project# git tag -a "1.0.20190505-0930" -m  "devops"git push master^C
+root@ip-172-31-33-113:/opt/sample-php-project# git push --tags
+Username for 'https://github.com': monusraj@gmail.com
+Password for 'https://monusraj@gmail.com@github.com':
+Counting objects: 1, done.
+Writing objects: 100% (1/1), 179 bytes | 179.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/monusraj/sample-php-project.git
+ * [new tag]         1.0.20190505-0930 -> 1.0.20190505-0930
+root@ip-172-31-33-113:/opt/sample-php-project#
